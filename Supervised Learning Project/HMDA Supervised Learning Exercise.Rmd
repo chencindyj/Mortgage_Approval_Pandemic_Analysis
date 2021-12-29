@@ -1,5 +1,5 @@
 ---
-title: "QMSS 5058 Final Project: Home Mortgage Disclosure Act Outcomes"
+title: "Final Project: Home Mortgage Disclosure Act Outcomes"
 author: "Cindy Chen"
 date: "11/23/2021"
 output: pdf_document
