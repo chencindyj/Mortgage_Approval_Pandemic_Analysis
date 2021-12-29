@@ -35,7 +35,7 @@ I also filtered out certain values that didn't make sense. Among traits such as 
 This allowed me to remove 41 variables, bringing my remaining predictors to 58.  These initial filters also reduced my data set down to 8,627 observations.
 
 ```{r load_data}
-setwd("~/CINDY CHEN/2021 Prep/SCHOOL WORK/Research Project/2020_lar")
+setwd("~/Research Project/2020_lar")
 mortgage <- read.csv("2020_lar.txt", sep = "|", nrow = 50000)
 
 #list of all the columns in this data table
