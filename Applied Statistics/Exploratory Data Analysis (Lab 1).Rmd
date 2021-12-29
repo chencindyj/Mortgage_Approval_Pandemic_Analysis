@@ -10,7 +10,7 @@ output:
 __*Brief context about my chosen data set: I used the news outlet The Intercept's "Trial and Terror" dataset that features the 950 defendants who have been prosecuted for terrorism since the 9/11 attacks, even though the legitimacy of their charges have been controversial.  There are some issues with data quality in terms of missing data, but the missing data do not preclude me from using it for this Lab assignment.  You can find the data here: https://github.com/firstlookmedia/trial-and-terror-data/ *__
 
 ```{r setup, include=FALSE}
-df = read.csv("C:/Users/Cindy C/Documents/GitHub/trial-and-terror-data/trial-and-terror.csv")
+df = read.csv("~/trial-and-terror-data/trial-and-terror.csv")
 
 #load my packages
 library(plyr)
