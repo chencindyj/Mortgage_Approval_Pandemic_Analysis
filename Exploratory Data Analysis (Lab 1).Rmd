@@ -1,6 +1,6 @@
 ---
-title: 'QMSS GR5015 - Lab #1'
-author: "Cindy Chen (cjc2279)"
+title: 'Lab #1'
+author: "Cindy Chen"
 date: "October 2, 2021"
 output:
   html_document: default
