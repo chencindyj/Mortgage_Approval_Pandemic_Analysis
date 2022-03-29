@@ -6,7 +6,7 @@ Inspired by The Markup's investigative reporting into the Home Mortgage Disclosu
 ### Applied Statistics
 Includes various exploratory data analysis exercises to understand trends in the 2020 HMDA data set.
 
-###Applied Stats - Final Project
+### Applied Stats - Final Project
 Comprehensive culminating project on the 2018 to 2020 HMDA data sets, including descriptive statistics, data cleaning rationale, statistical tests, and findings.  Includes final report and the associated Python code.
 
 ### Supervised Learning Project
