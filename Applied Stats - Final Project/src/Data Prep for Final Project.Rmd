@@ -1,0 +1,61 @@
+---
+title: "HDMA Data Prep"
+author: "Cindy Chen"
+date: "1/20/2022"
+output: html_document
+---
+## Data Prep for HDMA Pandemic Analysis Project
+### Since the three data files of 2018 - 2020 home mortgage applications are too large to load into my local computer or on Google Colab, I have prepared my data by filtering it, in order to reduce the computing requirements.
+
+Step 1. Load entire 2020 loan application data set.
+
+```{r cars, eval = FALSE}
+library(data.table)
+
+my_data <- fread("2020_lar.txt")
+```
+
+Step 2. Filter my data to Ohio and single-family properties, since that is the scope of my project.  Write the remaining data set into a CSV file that I can later read into Python. 
+
+```{r, eval = FALSE}
+my_data <- my_data[state_code == "OH" & derived_dwelling_category == "Single Family (1-4 Units):Site-Built" & loan_purpose == 1]
+
+write.table(my_data, "2020_lar_ohio_family_loans.csv")
+```
+
+Step 3. Calculate the number of additional rows that I will remove related to applicant race responses.  These values denote that that undefined values.
+
+```{r, eval = FALSE}
+nrow(my_data2019[applicant_race_1 != 6 & applicant_race_1 != 7 & action_taken < 4]) / nrow(my_data2019)
+```
+
+Step 4. Load 2019 loan application data, filter data, and save 2019 file.
+
+```{r pressure, eval=FALSE}
+my_data2019 <- fread("2019_lar.txt")
+my_data2019 <- my_data2019[state_code == "OH" & derived_dwelling_category == "Single Family (1-4 Units):Site-Built" & loan_purpose == 1]
+write.table(my_data2019, "2019_lar_ohio_family_loans.csv")
+```
+
+```{r, eval = FALSE}
+nrow(my_data2019)
+nrow(my_data2019[applicant_race_1 != 6 & applicant_race_1 != 7 & action_taken < 4]) / nrow(my_data2019)
+
+rm(my_data2019)
+```
+
+Step 5. Load 2018 loan application data, filter data, and save 2018 file.
+
+```{r, eval = FALSE}
+my_data2018 <- fread("2018_lar.txt")
+my_data2018 <- my_data2018[state_code == "OH" & derived_dwelling_category == "Single Family (1-4 Units):Site-Built"]
+
+write.table(my_data2018, "2018_lar_ohio_family_loans.csv")
+```
+
+```{r, eval = FALSE}
+nrow(my_data2018)
+nrow(my_data2018[applicant_race_1 != 6 & applicant_race_1 != 7 & action_taken < 4]) / nrow(my_data2018)
+
+```
+
